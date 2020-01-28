@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "322747008476",
+    "firebase_url": "https://capitalrouteapp.firebaseio.com",
+    "project_id": "capitalrouteapp",
+    "storage_bucket": "capitalrouteapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:322747008476:android:e7e49762f2703142fbfb19",
+        "android_client_info": {
+          "package_name": "com.example.capitalroute"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "322747008476-e45ksv3kfareh1ako9c0t7uvkeo035vn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.capitalroute",
+            "certificate_hash": "443fc57da5d04f8006d7a7c8de95d382f920bbc4"
+          }
+        },
+        {
+          "client_id": "322747008476-o0thcdmosjj2o3f3fssppp9cp72bsvs1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLetnoyay3Y5MUZVR3ianQ4zY8CtrZ6nU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "322747008476-o0thcdmosjj2o3f3fssppp9cp72bsvs1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

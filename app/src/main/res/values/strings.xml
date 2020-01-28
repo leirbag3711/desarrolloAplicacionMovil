@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">CapitalRoute</string>
+    <string name="facebook_app_id">2693548660680595</string>
+    <string name="fb_login_protocol_scheme">fb2693548660680595</string>
+
+</resources>

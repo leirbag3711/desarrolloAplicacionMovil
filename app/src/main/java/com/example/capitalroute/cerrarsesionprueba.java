@@ -63,6 +63,13 @@ public class cerrarsesionprueba extends AppCompatActivity {
         finish();
     }
 
+    //Mandar a MAinPAge
+    public void irMP(View view) {
+        //startActivity(new Intent(cerrarsesionprueba.this,cerrarsesionprueba.this));//Aqui iria a Homee
+        //finish();
+    }
+    //Fin de mandar a MainPage
+
 
     //Metodo para cerrar sesion en FB
     public void logoutFb(View view) {
@@ -90,5 +97,7 @@ public class cerrarsesionprueba extends AppCompatActivity {
         alert.show();
 
     }
+
+
     //Encender GPS
 }

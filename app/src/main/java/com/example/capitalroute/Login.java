@@ -104,7 +104,7 @@ public class Login extends AppCompatActivity {
               @Override
               public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                     if (firebaseAuth.getCurrentUser()!=null){
-                        startActivity(new Intent(Login.this,cerrarsesionprueba.class));//Despues se cambia a home
+                        startActivity(new Intent(Login.this,Home.class));//Despues se cambia a home
                     }
               }
           };
@@ -214,7 +214,7 @@ public class Login extends AppCompatActivity {
     //Esto tambien es para loggear en FB
 
         private void irPantallaPrincipal() {
-            Intent intent = new Intent(this,cerrarsesionprueba.class);//Esto debo cambiar que redireccione a home
+            Intent intent = new Intent(this,Home.class);//Esto debo cambiar que redireccione a home
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);//Para que no vuelva a login sino que cierre sesion
             startActivity(intent);
         }

@@ -29,11 +29,11 @@ public class registrarUsuario extends AppCompatActivity {
 
 
         //Aqui se edita el actionbar, pero al final lo escondo
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setLogo(R.drawable.logo);
-        getSupportActionBar().setDisplayUseLogoEnabled(true);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
-        getSupportActionBar().hide();
+        //getSupportActionBar().setDisplayShowHomeEnabled(true);
+        //getSupportActionBar().setLogo(R.drawable.logo);
+        //getSupportActionBar().setDisplayUseLogoEnabled(true);
+        //getSupportActionBar().setDisplayShowTitleEnabled(false);
+        //getSupportActionBar().hide();
         //Fin de interaccion con el actionbar
 
         //Se crea el listenner para regresar al inicio

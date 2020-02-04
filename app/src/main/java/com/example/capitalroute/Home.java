@@ -1,16 +1,24 @@
 package com.example.capitalroute;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.mapbox.mapboxsdk.Mapbox;
 import com.mapbox.mapboxsdk.maps.MapView;
 import com.mapbox.mapboxsdk.maps.MapboxMap;
 import com.mapbox.mapboxsdk.maps.OnMapReadyCallback;
 import com.mapbox.mapboxsdk.maps.Style;
 
+import android.view.Gravity;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.Toast;
+import android.support.v7.widget.Toolbar;
 
 import com.mapbox.android.core.permissions.PermissionsListener;
 import com.mapbox.android.core.permissions.PermissionsManager;
@@ -36,6 +44,8 @@ public class Home extends AppCompatActivity implements OnMapReadyCallback, Permi
     private MapboxMap mapboxMap;
     private MapView mapView;
 
+    private Toolbar toolbar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,11 +55,15 @@ public class Home extends AppCompatActivity implements OnMapReadyCallback, Permi
         setContentView(R.layout.activity_home);
 
         //Aqui se edita el actionbar, pero al final lo escondo
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setLogo(R.drawable.logo);
-        getSupportActionBar().setDisplayUseLogoEnabled(true);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
-        getSupportActionBar().hide();
+        toolbar= (Toolbar)findViewById(R.id.toolbarConMenu);
+        setSupportActionBar(toolbar);
+
+
+        //getSupportActionBar().setDisplayShowHomeEnabled(true);
+        //getSupportActionBar().setLogo(R.drawable.logo);
+        //getSupportActionBar().setDisplayUseLogoEnabled(true);
+        //getSupportActionBar().setDisplayShowTitleEnabled(false);
+        //getSupportActionBar().hide();
         //Fin de interaccion con el actionbar
 
 
@@ -60,6 +74,40 @@ public class Home extends AppCompatActivity implements OnMapReadyCallback, Permi
         //Finaliza lo de Mapbox
         //setContentView(R.layout.activity_home);
     }
+
+
+    //Funciones para el menu
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_paginainicio, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.nuevaRuta:
+                Toast.makeText(this, "Item 1 selected", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.favoritos:
+                Toast.makeText(this, "Item 2 selected", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.cerrarSesion:
+                Toast.makeText(this, "Se cerró sesión exitosamente", Toast.LENGTH_SHORT).show();
+                cerrarsesion();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    private void cerrarsesion() {
+        FirebaseAuth.getInstance().signOut();//Cierra sesion
+        startActivity(new Intent(getApplicationContext(),Login.class));
+        finish();
+    }
+    //Fin de funciones para el menu
 
     //Funciones para Mapbox
     @Override

@@ -13,7 +13,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Home"></activity>
+        <activity android:name=".Login"></activity>
+        <activity
+            android:name=".menuMainPage"
+            android:label="@string/title_activity_menu_main_page"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".menuHome"
+            android:label="@string/title_activity_menu_home"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Home" />
         <activity android:name=".PermitirAccederUbicacion" />
 
         <meta-data
@@ -23,7 +32,7 @@
         <activity android:name=".cerrarsesionprueba" />
         <activity android:name=".olvidarContrasegna" />
         <activity android:name=".registrarUsuario" />
-        <activity android:name=".Login">
+        <activity android:name=".pantallaBienvenida">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -6,6 +6,13 @@
     xmlns:mapbox="http://schemas.android.com/apk/res-auto"
     tools:context=".Home">
 
+    <include
+        layout="@layout/toolbarmenu"
+        mapbox:layout_constraintBottom_toTopOf="@+id/mapViewid"
+        mapbox:layout_constraintEnd_toEndOf="parent"
+        mapbox:layout_constraintStart_toStartOf="parent"
+        mapbox:layout_constraintTop_toTopOf="parent" />
+
     <com.mapbox.mapboxsdk.maps.MapView
         android:id="@+id/mapViewid"
         android:layout_width="match_parent"
@@ -18,18 +25,5 @@
         mapbox:mapbox_cameraZoom="12">
 
     </com.mapbox.mapboxsdk.maps.MapView>
-
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar5"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        android:minHeight="@dimen/abc_action_bar_default_height_material" />
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:layout_gravity="center"
-        android:src="@drawable/logo" />
 
 </android.support.constraint.ConstraintLayout>

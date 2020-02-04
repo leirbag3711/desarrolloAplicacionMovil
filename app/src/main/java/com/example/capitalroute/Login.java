@@ -70,11 +70,11 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         //Aqui se edita el actionbar, pero al final lo escondo
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setLogo(R.drawable.logo);
-        getSupportActionBar().setDisplayUseLogoEnabled(true);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
-        getSupportActionBar().hide();
+        //getSupportActionBar().setDisplayShowHomeEnabled(true);
+        //getSupportActionBar().setLogo(R.drawable.logo);
+        //getSupportActionBar().setDisplayUseLogoEnabled(true);
+        //getSupportActionBar().setDisplayShowTitleEnabled(false);
+        //getSupportActionBar().hide();
         //Fin de interaccion con el actionbar
 
         //Se crea el listenner para enviar al usuario a la actividad de registrar usuario
@@ -140,7 +140,7 @@ public class Login extends AppCompatActivity {
 
                                     if (task.isSuccessful()){
                                         Toast.makeText(Login.this, "Inicio de sesión correcto", Toast.LENGTH_LONG).show();
-                                        startActivity(new Intent(getApplicationContext(),cerrarsesionprueba.class));
+                                        startActivity(new Intent(getApplicationContext(),Home.class));
                                     }else{
                                         Toast.makeText(Login.this, "Error:"+task.getException().getMessage(), Toast.LENGTH_LONG).show();
                                     }

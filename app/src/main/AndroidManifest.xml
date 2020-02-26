@@ -13,7 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Login"></activity>
+        <activity android:name=".addfavoritos"></activity>
+        <activity android:name=".lugaresFavoritos" />
+        <activity android:name=".Login" />
         <activity
             android:name=".menuMainPage"
             android:label="@string/title_activity_menu_main_page"

@@ -92,6 +92,7 @@ public class Home extends AppCompatActivity implements OnMapReadyCallback, Permi
                 return true;
             case R.id.favoritos:
                 Toast.makeText(this, "Item 2 selected", Toast.LENGTH_SHORT).show();
+                addfavoritos();
                 return true;
             case R.id.cerrarSesion:
                 Toast.makeText(this, "Se cerró sesión exitosamente", Toast.LENGTH_SHORT).show();
@@ -100,6 +101,11 @@ public class Home extends AppCompatActivity implements OnMapReadyCallback, Permi
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    private void addfavoritos() {
+        startActivity(new Intent(getApplicationContext(),lugaresFavoritos.class));
+        finish();
     }
 
     private void cerrarsesion() {

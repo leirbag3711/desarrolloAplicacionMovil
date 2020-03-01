@@ -5,20 +5,109 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".addfavoritos">
-    
-    <LinearLayout
-        android:orientation="horizontal"
-        android:background="@color/quantum_lightblueA100"
-        android:layout_marginTop="50dp"
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="50dp">
-        
-        <fragment
-            android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
-            android:id="@+id/autocomplete_fragment"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:minHeight="@dimen/abc_action_bar_default_height_material">
+        <ImageButton
+            android:id="@+id/backarrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:background="@drawable/flechairatrardiezseis"
+            android:onClick="goBackHomeFromFav"
+            android:layout_marginLeft="30dp" />
+
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-        
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Registrar un lugar"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:fontFamily="@font/mandali" />
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:layout_width="355dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:text="Nombre"
+        android:textColor="#2B2B2B"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:fontFamily="@font/mandali" />
+
+
+    <EditText
+        android:id="@+id/nombrelugar"
+        android:layout_width="355dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="532dp"
+        android:layout_marginTop="170dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Por ejemplo: Casa de Gabriel"
+        android:textColorHint="@color/colorPrimary"
+        android:textCursorDrawable="@color/colorPrimary" />
+
+    <TextView
+        android:layout_width="355dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="220dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:text="Dirección"
+        android:textColor="#2B2B2B"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:fontFamily="@font/mandali" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="265dp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal">
+
+        <fragment
+            android:id="@+id/autocomplete_fragment"
+            android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
     </LinearLayout>
+
+    <Button
+        android:id="@+id/botonGuardarLugar"
+        android:layout_width="166dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="122dp"
+        android:layout_marginLeft="122dp"
+        android:layout_marginTop="400dp"
+        android:layout_marginEnd="122dp"
+        android:layout_marginRight="122dp"
+        android:layout_marginBottom="110dp"
+        android:background="#1A9EA6"
+        android:onClick="guardarLugarServicio"
+        android:text="Guardar"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold" />
     
 </RelativeLayout>

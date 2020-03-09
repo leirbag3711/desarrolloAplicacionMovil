@@ -104,7 +104,7 @@ public class Home extends AppCompatActivity implements OnMapReadyCallback, Permi
     }
 
     private void addfavoritos() {
-        startActivity(new Intent(getApplicationContext(),addfavoritos.class));
+        startActivity(new Intent(getApplicationContext(),favoritos.class));
         finish();
     }
 
